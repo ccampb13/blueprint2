@@ -1,0 +1,12 @@
+extends ../shared/template
+
+block content
+  h1= title
+  h2 $#{rate.toFixed(2)}
+
+ table#board
+  tbody
+    - for(var y = 0; y < building.y; y++)
+      tr
+        - for(var x = 0; x < building.x; x++)
+          td(data-x=x, data-y=y)
